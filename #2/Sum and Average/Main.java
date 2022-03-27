@@ -28,8 +28,8 @@ public class Main{
    public static void main(String[] args){
       int[] m = new int[3];
       m[0]=1;
-      m[1]=1;
-      m[2]=1;
+      m[1]=2;
+      m[2]=4;
       System.out.println(sumAndAvg(m));
    }
 }
