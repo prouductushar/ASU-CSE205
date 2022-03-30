@@ -1,0 +1,43 @@
+You must write a public class named Mastermind with fields and methods as defined below.
+
+## Mastermind
+
+- secret: int
+- guesses: int
++ Mastermind() <<default constructor>>
++ makeNewSecret()
++ guess(guess: int): int
++ getGuessCount(): int
+- createSecret(): int
+- getDigit(): int
+
+## Structure of the Fields
+
+As described by the UML Class Diagram above, your Mastermind class must have the following fields:
+
+> a private field named secret of type int initialized to 0
+> a private field named guesses of type int initialized to 0
+
+## Structure of the Methods
+
+As described by the UML Class Diagram above, your Mastermind class must have the following methods:
+
+> a public default (parameterless) constructor method
+> a public method named makeNewSecret that takes no arguments and returns nothing
+> a public method named guess that takes one int argument and returns an int
+> a public method named getGuessCount that takes no arguments and returns an int
+> a private method named createSecret that takes no arguments and returns an int
+> a private method named getDigit that takes no arguments and returns an int
+
+## Behavior of the Methods
+
+> The default (parameterless) constructor method should call the makeNewSecret method to initialize the new Mastermind object.
+> The makeNewSecret method should call the createSecret method to get a new secret, and the store this new secret in the secret instance variable. 
+  This method should also set the guesses instance variable value to 0.
+> The guess method should compare the digits in the parameter variable (the user's guess) to the digits in the secret number. 
+  This method should count the number of matching digits and return this number. This method should also increment the instance variable named guesses by 1. 
+  Remember that only a correct digit in the correct location should count in the value returned by this method. 
+> The getGuessCount should return the value stored in the instance variable named guesses.
+> The createSecret method should call the getDigit method 4 times to get the 4 random digits of the new secret number. 
+  This method should return the 4 digit secret number as an int.
+> The getDigit method should return a randomly chosen integer between 0 and 9 (inclusive).
