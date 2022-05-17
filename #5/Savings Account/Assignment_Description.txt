@@ -1,0 +1,34 @@
+Write a public class named SavngsAccount with fields and methods as defined below, and that inherits from (extends) the BankAccount class!
+
+The SavingsAccount class has no required fields.
+
+Your SavingsAccount class must have the following methods:
+
+> a public method named debit that takes an int argument and returns a boolean
+> a public method named applyInterest that takes no arguments and returns nothing
+> a public method named accountInfo that takes no arguments and returns a String
+
+Behavior of the Methods:
+
+> The debit method should subtract the argument amount from the currentBalance, but only if the amount is not more than the currentBalance. 
+  This method should return true if the amount was subtracted from the currentBalance, otherwise it should return false.
+> The applyInterest method should compute the interest amount and add this amount to the currentBalance, but only if the currentBalance is greater than 0.
+> The accountInfo method will return a string formatted exactly like this:
+
+Type of Account : Savings
+Account ID      : 1111-2222-3333-4444
+Current Balance : $123.45
+Interest rate   : 1.50%
+
+Additional Info:
+
+1. All accounts have balance, credit and debit amounts, and fees stored and passed as a number of pennies (int).
+2. All debit amounts will be subtracted from the balance, and all credit amounts will be added to the balance.
+3. All bank accounts have a non-negative interest rate (0.02 would be a 2% interest rate).
+4. When applying interest, interest amount is calculated by multiplying the balance by the interest rate.
+5. When applying interest, interest amount is always added to the balance, and any fractional part will be rounded down.
+6. Interest will not be applied to any Savings or Checking account with a balance of zero or less.
+7. Debit methods will return false if the transaction cannot be made because of insufficient balance or insufficient credit limit. Otherwise they will return true.
+8. The credit method will always return true.
+9. A SavingsAccount cannot have a negative balance.
+   - The debit method will return false if an attempt to overdraw the account is made.
