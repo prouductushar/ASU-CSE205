@@ -1,0 +1,47 @@
+Write a public class named CreditcardAccount with fields and methods as defined below, and that inherits from (extends) the BankAccount class!
+
+Your CreditcardAccount class must have the following fields:
+
+> a private field named limit of type int initialized to 0
+
+Structure of the Methods:
+
+> a public method named debit that takes an int argument and returns a boolean
+> a public method named setLimit that takes an int and returns nothing
+> a public method named getLimit that takes no arguments and returns an int
+> a public method named applyInterest that takes no arguments and returns nothing
+> a public method named accountInfo that takes no arguments and returns a String
+
+Behavior of the Methods
+
+> The debit method should subtract the argument amount from the currentBalance, but only if the amount would not cause the current balance to violate the credit limit. This method should return true if the amount was subtracted from the currentBalance, otherwise it should return false.
+> The setLimit method should store the argument amount in the limit field.
+> The getLimit method should return the value stored in the limit field.
+> The applyInterest method should compute the interest amount and add this amount to the currentBalance, but only if the currentBalance is less than 0.
+> The accountInfo method will return a string formatted exactly like this:
+
+Type of Account : Creditcard
+Account ID      : 1111-2222-3333-4444
+Current Balance : $123.45
+Interest rate   : 1.50%
+Credit Limit    : $10000.00
+
+All Bank Accounts
+
+1. All accounts have balance, credit and debit amounts, fees, and limits stored and passed as a number of pennies (int).
+2. All debit amounts will be subtracted from the balance, and all credit amounts will be added to the balance.
+3. All bank accounts have a non-negative interest rate (0.02 would be a 2% interest rate).
+4. When applying interest, interest amount is calculated by multiplying the balance by the interest rate.
+5. When applying interest, interest amount is always added to the balance, and any fractional part will be rounded down.
+6. Interest will not be applied to any Savings or Checking account with a balance of zero or less.
+7. Debit methods will return false if the transaction cannot be made because of insufficient balance or insufficient credit limit. Otherwise they will return true.
+8. The credit method will always return true.
+
+Creditcard Accounts
+
+1. The balance of a CreditcardAccount cannot overrun its credit limit.
+   - The debit method will return false if an attempt to overdraw the account is made.
+   - The balance of a CreditcardAccount will generally be negative, because when you spend money on a credit card, you are borrowing money, 
+     and the negative balance reflects money that you owe.
+2. The credit limit will be stored as a positive value. For example, a credit limit of $10000.00 will be stored in the limit field as the int value 1000000.
+3. Interest will not be applied to a CreditcardAccount with a positive or zero balance.
