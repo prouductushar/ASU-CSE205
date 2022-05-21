@@ -1,0 +1,50 @@
+You must complete the public class named MyStack.java with fields and methods as defined below! 
+Your MyStack.java will implement the IStack interface that is provided in the IStack.java file. 
+You must implement your MyStack class as either a linked list or an array list (refer to your MyArrayList and MyLinkedList work). 
+Your MyStack must not be arbitrarily limited to any fixed size at run-time.
+
+Structure of the Fields:
+
+While there are no required fields for your MyStack class, you will need to decide what fields to implement. 
+This decision will be largely based on your choice to implement this MyStack as either an array list or a linked list.
+
+Structure of the Methods:
+
++ a public method named push that takes an Object argument and returns nothing
++ a public method named pop that takes no arguments and returns an Object
++ a public method named peek that takes no arguments and returns an Object
++ a public method named indexOf that takes an Object argument and returns an int
++ a public method named getSize that takes no arguments and returns an int
++ a public method named isEmpty that takes no arguments and returns an boolean
+
+Additional Information:
+
+> MyStack
+
+1. This concrete class will store its elements in either an internal array list or linked list. 
+   All such implementation details must be contained in your myStack.java file. 
+   You may add any additional fields, methods, and inner classes that you will need to achieve this.
+2. push method
+   > Add a new item to top of the stack. For example: given the stack {1, 2, 3} (where the value 1 is on the top) and an instruction to push(99), 
+     the result would be this {99, 1, 2, 3}, with the value 99 now on the top of the stack.
+3. pop method
+   > Remove and return the item currently on the top of the stack. 
+     For example: given the stack {1, 2, 3} (where the value 1 is on the top) and an instruction to pop(), 
+     the stack would now look like this {2, 3}, and the value 1 would be returned.
+   > Throws a NoSuchElementException if the stack is currently empty when this method is called.
+4. peek method
+   > Return (but do not remove) the item currently on the top of the stack. 
+     For example: given the stack {1, 2, 3} (where the value 1 is on the top) and an instruction to peek(), 
+     the stack would still look like this {1, 2, 3}, and the value 1 would be returned.
+   > Throws a NoSuchElementException if the stack is currently empty when this method is called.
+5. indexOf method
+   > Return the (zero-based) number of elements from the front or top of the collection where the specified item is first found. 
+     Returns -1 if the item is not found in the collection. For example: given the stack {1, 2, 3} (where the value 1 is on the top) and the instruction indexOf(2), 
+     the value 1 would be returned (because the value 2 was found at index 1 (1 element below the top) in the stack. 
+     For another example: given the stack {1, 2, 3} (where the value 1 is on the top) and the instruction indexOf(99), 
+     the value -1 would be returned (because the value 99 is not found in the stack).
+6. getSize method
+   > Returns the number of elements currently stored in the stack.
+7. isEmpty method
+   > Returns true if there are currently no items stored in this stack, otherwise returns false.
+
