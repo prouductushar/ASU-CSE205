@@ -1,0 +1,57 @@
+Complete a public class named MyBSTree.java with fields and methods as defined below!
+MyBSTree is a Java generic type. In the info given below, the identifier T denotes this generic type.
+
+Structure of the MyBSTree Fields:
+
+- a private field named root of type Node
+
+Structure of the MyBSTree Methods:
+
++ a public method named insert that takes an object of type T as an argument and returns nothing
++ a public method named contiansItem that takes an object of type T as an argument and return a boolean
++ a public method named getSize that takes no arguments and returns an int
++ a public method named printInOrder that takes no arguments and returns nothing
++ a public method named toString that takes no arguments and returns a String
+
+You will also need to implement a nested inner class named Node inside of your MyBSTree class. 
+Each Node object will store one piece of data in the binary search tree. The actual data value will be stored in the data field of the Node object. 
+As these are binary Node objects, each Node will also store a reference to a left sub-node and a right sub-node. 
+These references will be stored in the left and right fields.
+
+Structure of the Node Fields:
+
++ a public field named data of type T
++ a public field named left of type Node
++ a public field named right of type Node
+
+Structure of the Node Methods:
+
++ a public constructor that takes an argument of type T
++ a public method named insert that takes an argument of type T and returns nothing
+
+Additional Information:
+
+> MyBSTree
+
+1. This concrete class will store its elements in a collection of linked binary Node objects.
+2. insert method
+   > Inserts a new item into the binary search tree in the correct location.
+   > There should be no duplicate items in the tree. 
+     If an item is inserted and that item is already in the tree then this method should simply return without changing the state of the tree.
+3. containsItem method
+   > Returns true if the tree contains the specified item; otherwise returns false.
+4. getSize method
+   > Returns the number of nodes currently stored in this tree.
+5. printInOrder method
+   > Prints the items in the tree in a space separated list in ascending order.
+6. toString method
+   > Returns a String containing the items in the tree in ascending order and separated by a space.
+
+> Node
+
+1. Your BSTree class must contain a nested inner class named Node. This class must be declared to be package level (not private or public).
+2. parameterized constructor method
+   > initializes the data of the new Node with the argument value.
+3. insert method
+   > this is a recursive method that finds the insertion point and inserts a Node for the new item in the correct position in the sub-tree for which this 
+     Node is the root. Remember that no duplicate items can be stored in the tree.
