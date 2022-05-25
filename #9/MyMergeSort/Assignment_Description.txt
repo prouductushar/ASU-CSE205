@@ -1,0 +1,47 @@
+Complete the public class named MySorts.java with methods as defined below!
+
+Note that your merge sort algorithm must be implemented to operate on IList objects, as defined in the given files iList.java and MyArrayList.java.
+
+Structure of the MySorts Fields:
+
+Your merge sort algorithm should require no static (or instance) fields in your MySorts class.
+
+Structure of the MySorts merge sort Methods:
+
++ a public static method named mergesort that takes an object of type IList<Integer> as an argument and returns nothing
+- a private static method named mergesortHelper that takes an object of type IList<Integer> and returns an IList<Integer>
+- a private static method named getLeftHalf that takes an object of type IList<Integer> returns an IList<Integer>
+- a private static method named getRightHalf that takes an object of type IList<Integer> returns an IList<Integer>
+- a private static method named merge that takes two IList<Integer> objects as arguments and returns an IList<Integer>
+
+Additional Information:
+
+> MySorts merge sort algorithm
+
+1. the mergesort method will take a reference to an IList<Integer> object as its only argument. 
+   This method will call the mergesortHelper method to do the actual work of sorting the list. 
+   This is the method that one would call to apply the quicksort algorithm to a list of values. 
+   By the time this method returns, the values in the argument IList should be sorted.
+2. the mergesortHelper method is a recursive method that will implement the actual merge sort algorithm. 
+   The argument is a reference to the list of values that is to be sorted. 
+   this method will call the getLeftHalf and getRightHalf methods to divide a larger list, and call the merge method to merge two sorted sub-lists into one sorted list.
+3. the getLeftHalf method will take as its argument, a reference to the list of values that is to be sorted. 
+   This method will return an IList<Integer> that contains the first half of the list that was passed to it as an argument.
+   > For examples:
+     > given an IList named list, of these values {1,2,3,4}, getLeftHalf(list) would return an IList<Integer> with these values {1,2};
+     > given an IList named list, of these values {3,6,2,5,4,1,7}, getLeftHalf(list) would return an IList<Integer> with these values {3,6,2}
+   > Note that for lists with an odd number of values (like {3,6,2,5,4,1,7}), 
+     the getLeftHalf method should return the smaller half of the list (i.e. {3,6,2} instead of {3,6,2,5}).
+4. the getRightHalf method will take as its argument, a reference to the list of values that is to be sorted. 
+   This method will return an IList<Integer> that contains the second half of the list that was passed to it as an argument.
+   > For examples:
+     > given an IList named list, of these values {1,2,3,4}, getRightHalf(list) would return an IList<Integer> with these values {3,4};
+     > given an IList named list, of these values {3,6,2,5,4,1,7}, getRightHalf(list) would return an IList<Integer> with these values {5,4,1,7}
+   > Note that for lists with an odd number of values (like {3,6,2,5,4,1,7}), the getRightHalf method should return the larger half of the list (i.e. {5,4,1,7} instead of {4,1,7}).
+5. the merge method will take two sorted lists as arguments. 
+   This method must create a new IList<Integer> and merge the two argument lists into one sorted list that will be returned.
+   > For examples:
+     > given an IList named list1, of these values {2,4,6}, and an IList named list2, 
+       of these values {1,3,5}, merge(list1, list2) would return an IList<Integer> with these values {1,2,3,4,5,6};
+     > given an IList named list1, of these values {1,4,5,8}, and an IList named list2, of these values {2,3,4,7,9}, 
+       merge(list1, list2) would return an IList<Integer> with these values {1,2,3,4,4,5,7,8,9};
